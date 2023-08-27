@@ -1,3 +1,4 @@
+# ./sqlrestore_exercise.sh sakila /home/theia/backups/sakila-27-08-2023.sql
 if [ -f $2 ]; then 
     dbname=$(mysql -e "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$1'" | grep $1)
     if [ $1 != $dbname ]; then
