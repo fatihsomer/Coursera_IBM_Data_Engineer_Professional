@@ -1,0 +1,33 @@
+PostgreSQL
+----------
+create user backup_operator with password 'password';
+create role backup;
+grant connect on database tolldata to backup;
+\connect tolldata
+grant select on all tables in schema toll to backup;
+grant backup to backup_operator;
+
+
+-----------------------------------------------------
+
+
+MySQL
+-----
+source billingdata.sql
+show tables;
+select table_name, data_length from information_schema.tables where table_schema="billing";
+select * from billdata where billedamount>19999;
+create index billedamount on billdata(billedamount);
+select * from billdata where billedamount>19999;
+show engines;
+select table_name, engine from information_schema.tables where table_schema="billing";
+
+
+-----------------------------------------------------
+
+
+Db2 Cloud 
+---------
+create view basicbilldetails as select customerid, month, billedamount from billing;
+select * from billing where billedamount=19929;
+create index billingamount on billing(billedamount);
