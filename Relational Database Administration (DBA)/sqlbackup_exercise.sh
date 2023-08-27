@@ -1,3 +1,4 @@
+# ./sqlbackup_exercise.sh sakila /home/theia/backups/
 dbname=$(mysql -e "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$1'" | grep $1)
 
 if [ ! -d $2 ]; then 
