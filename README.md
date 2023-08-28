@@ -1,2 +1,2 @@
-# Coursera_IBM_Data_Engineer_Professional
+# Coursera IBM Data Engineer Professional
 Coursera IBM Data Engineer Professional
