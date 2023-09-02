@@ -37,3 +37,56 @@ test4={
 	"column": "monthid",
 	"table": "DimMonth"
 }
+
+test5={
+    "testname":"Check for nulls",
+    "test":check_for_nulls,
+    "column": "year",
+    "table": "DimMonth"
+}
+
+test6={
+    "testname":"Check for min and max",
+    "test":check_for_min_max,
+    "column": "quarter",
+    "table": "DimMonth",
+    "minimum":1,
+    "maximum":4
+}
+
+test7={
+    "testname":"Check for valid values",
+    "test":check_for_valid_values,
+    "column": "quartername",
+    "table": "DimMonth",
+    "valid_values":{'Q1','Q2','Q3','Q4'}
+}
+
+test8={
+    "testname":"Check for duplicates",
+    "test":check_for_duplicates,
+    "column": "customerid",
+    "table": "DimCustomer"
+}
+
+test9={
+    "testname":"Check for nulls",
+    "test":check_for_nulls,
+    "column": "billedamount",
+    "table": "FactBilling"
+}
+
+test10={
+    "testname":"Check for duplicates",
+    "test":check_for_duplicates,
+    "column": "billid",
+    "table": "FactBilling"
+}
+
+test11={
+    "testname":"Check for valid values",
+    "test":check_for_valid_values,
+    "column": "quarter",
+    "table": "DimMonth",
+    "valid_values":{1,2,3,4}
+}
