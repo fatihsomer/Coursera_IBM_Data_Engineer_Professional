@@ -1,0 +1,12 @@
+# MyDimDate
+
+dateid
+date
+day
+weekday
+weekdayName
+month
+monthName
+quarter
+quarterName
+year
