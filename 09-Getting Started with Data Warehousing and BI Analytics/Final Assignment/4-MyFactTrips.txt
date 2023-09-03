@@ -1,0 +1,6 @@
+# MyFactTrips
+tripid
+tripNumber
+wasteid
+zoneid
+dateid

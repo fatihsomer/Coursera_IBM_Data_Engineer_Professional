@@ -1,0 +1,4 @@
+# MyDimZone
+zoneid
+collectionZone
+city
