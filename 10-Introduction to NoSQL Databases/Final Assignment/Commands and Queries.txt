@@ -1,4 +1,4 @@
-export CLOUDANTURL=""
+export CLOUDANTURL="abc"
 
 
 Task 1:
@@ -114,7 +114,7 @@ mongoexport -u root -p xyz --authenticationDatabase admin --db entertainment --c
 
 
 Task 12:
-cqlsh --username cassandra --password MjkxOTMtZmF0aWhz
+cqlsh --username cassandra --password xyz
 CREATE KEYSPACE entertainment   WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
 use entertainment;
 create table movies( id text primary key, title text, year text, rating text, director text );
