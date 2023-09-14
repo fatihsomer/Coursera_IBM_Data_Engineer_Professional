@@ -1,0 +1,9 @@
+Hands-on Lab: Data Warehousing
+------------------------------
+
+linux>
+start_postgres
+
+postgresql>
+softcart_staging_tables.sql
+
