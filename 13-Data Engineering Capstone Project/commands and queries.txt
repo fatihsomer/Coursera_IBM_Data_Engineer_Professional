@@ -1,0 +1,35 @@
+Hands-on Lab: ETL
+-----------------
+
+linux>
+
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/sales.sql
+
+start_mysql
+
+mysql --host=127.0.0.1 --port=3306 --user=root --password=xxxxxx
+
+>mysql
+
+create database sales;
+
+use sales
+
+source sales.sql
+
+
+linux>
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/mysqlconnect.py
+
+python3 -m pip install mysql-connector-python==8.0.31
+
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/db2connect.py
+
+python3 -m pip install ibm-db
+
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/sales.csv
+
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/automation.py
+
+python3 automation.py
+
