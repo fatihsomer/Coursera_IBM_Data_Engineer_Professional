@@ -19,17 +19,13 @@ source sales.sql
 
 
 linux>
-wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/mysqlconnect.py
+pip install mysql-connector-python==8.0.31
 
-python3 -m pip install mysql-connector-python==8.0.31
+pip install ibm-db==3.1.1     
 
-wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/db2connect.py
-
-python3 -m pip install ibm-db
-
-wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/sales.csv
+python3.8 -m pip install --upgrade pip
 
 wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0321EN-SkillsNetwork/ETL/automation.py
 
-python3 automation.py
+python3.8 automation.py
 
