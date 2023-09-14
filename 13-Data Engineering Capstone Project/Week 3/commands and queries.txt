@@ -1,0 +1,40 @@
+Hands-on Lab: Data Warehouse Reporting
+--------------------------------------
+
+IBM DB2 Cloud>
+
+Select country, category, sum (amount) as totalsales
+from FACTSALES
+left join DIMCOUNTRY on FACTSALES.countryid=DIMCOUNTRY.countryid 
+left join DIMCATEGORY on FACTSALES.categoryid=DIMCATEGORY.categoryid
+GROUP BY GROUPING SETS (country, category)
+order by country, category
+
+
+Select country, category, sum (amount) as totalsales
+from FACTSALES
+left join DIMCOUNTRY on FACTSALES.countryid=DIMCOUNTRY.countryid 
+left join DIMCATEGORY on FACTSALES.categoryid=DIMCATEGORY.categoryid
+GROUP BY ROLLUP (country, category)
+order by country, category
+
+
+Select country, category, sum (amount) as totalsales
+from FACTSALES
+left join DIMCOUNTRY on FACTSALES.countryid=DIMCOUNTRY.countryid 
+left join DIMCATEGORY on FACTSALES.categoryid=DIMCATEGORY.categoryid
+GROUP BY CUBE (country, category)
+order by country, category
+
+
+--MQT
+CREATE TABLE total_sales_per_country (country, total_sales) AS
+(   
+    SELECT country, sum(amount)
+    FROM FACTSALES
+    LEFT JOIN DIMCOUNTRY ON FACTSALES.countryid = DIMCOUNTRY.countryid
+    GROUP BY country
+)
+    DATA INITIALLY DEFERRED
+    REFRESH DEFERRED
+    MAINTAINED BY SYSTEM;
